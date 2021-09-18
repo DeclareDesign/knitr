@@ -600,8 +600,9 @@ process_tangle.inline = function(x) {
 # add a label [and extra chunk options] to a code chunk
 label_code = function(code, label) {
   code = one_string(c('', code, ''))
-  paste0('## ----', stringr::str_pad(label, max(getOption('width') - 11L, 0L), 'right', '-'),
-         '----', code)
+  # paste0('## ----', stringr::str_pad(label, max(getOption('width') - 11L, 0L), 'right', '-'),
+         # '----', code)
+  code
 }
 
 as.source = function(code) {
